@@ -42,7 +42,7 @@ function SlotStatus({ zone, slotInfor = {}, slot }) {
               level={5}
               className="detail-slot-title my-0"
               style={{ color: token.green7 }}>
-              {`Khu ${zone} - ${position}`}
+              {`Zone ${zone} - ${position}`}
             </Typography.Title>
             <Tag color="cyan">{slot.vehicle}</Tag>
           </Flex>

@@ -56,7 +56,7 @@ const DashBoard = () => {
                         <Card
                             title={
                                 <CustomeTag bordered={false} entity={"A"} entityType={'zone'}>
-                                    {"Khu A"}
+                                    {"Zone A"}
                                 </CustomeTag>
                             }
                             style={{
@@ -69,7 +69,7 @@ const DashBoard = () => {
                         <Card
                             title={
                                 <CustomeTag bordered={false} entity={"B"} entityType={'zone'}>
-                                    {"Khu B"}
+                                    {"Zone B"}
                                 </CustomeTag>
                             }
                             style={{
@@ -82,7 +82,7 @@ const DashBoard = () => {
                         <Card
                             title={
                                 <CustomeTag bordered={false} entity={"C"} entityType={'zone'}>
-                                    {"Khu O"}
+                                    {"Empty Zone"}
                                 </CustomeTag>
                             }
                             style={{

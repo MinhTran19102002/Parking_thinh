@@ -62,7 +62,7 @@ const Map = () => {
                 <Radio.Group defaultValue={zone} buttonStyle="solid" onChange={onChangeZone}>
                     {state.zones.map((zone) => (
                         <Radio.Button key={zone} value={zone}>
-                            {"Khu " + zone}
+                            {"Zone " + zone}
                         </Radio.Button>
                     ))}
                 </Radio.Group>

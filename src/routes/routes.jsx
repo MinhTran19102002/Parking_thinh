@@ -28,14 +28,14 @@ const publicRoutes = [
     },
     {
         key: 'map',
-        label: 'Bản đồ',
+        label: 'Map',
         path: '/map',
         element: <Map />,
         icon: <CarOutlined />
     },
     {
         key: 'history',
-        label: 'Lịch sử',
+        label: 'History',
         path: '/history',
         element: <History />,
         icon: <HistoryOutlined />

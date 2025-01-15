@@ -84,7 +84,7 @@ const GaugeCard = (database) => {
           lineHeight: '44px',
           color: token.colorTextSecondary
         },
-        formatter: () => ('Xe đang đỗ')
+        formatter: () => ('Vehicle is parking')
       }
     },
     gaugeStyle: {

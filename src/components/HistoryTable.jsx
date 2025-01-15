@@ -5,33 +5,33 @@ function HistoryTable({ data }) {
 
     const columns = [
         {
-            title: 'Biển số xe',
+            title: 'License plate',
             dataIndex: 'bien_so',
             key: 'bien_so',
             // render: (text) => <a>{text}</a>,
         },
         {
-            title: 'Loại xe',
+            title: 'Vehicle type',
             dataIndex: 'loai_xe',
             key: 'loai_xe',
         },
         {
-            title: 'Phí',
+            title: 'Fee',
             dataIndex: 'phi',
             key: 'phi',
         },
         {
-            title: 'Thời gian vào',
+            title: 'Entry time',
             dataIndex: 'thoi_gian_vao',
             key: 'thoi_gian_vao',
         },
         {
-            title: 'Thời gian ra',
+            title: 'Out time',
             dataIndex: 'thoi_gian_ra',
             key: 'thoi_gian_ra',
         },
         {
-            title: 'Trạng thái',
+            title: 'Status of vehicle',
             dataIndex: 'trang_thai',
             key: 'trang_thai',
         },
