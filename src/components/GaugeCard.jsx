@@ -182,7 +182,7 @@ const GaugeCard0 = (database) => {
           lineHeight: '44px',
           color: token.colorTextSecondary
         },
-        formatter: () => ('Xe chưa có chỗ đậu')
+        formatter: () => ('The vehicle has no parking spot')
       }
     },
     gaugeStyle: {

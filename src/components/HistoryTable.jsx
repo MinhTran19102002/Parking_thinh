@@ -26,7 +26,7 @@ function HistoryTable({ data }) {
             key: 'thoi_gian_vao',
         },
         {
-            title: 'Out time',
+            title: 'Exit time',
             dataIndex: 'thoi_gian_ra',
             key: 'thoi_gian_ra',
         },
