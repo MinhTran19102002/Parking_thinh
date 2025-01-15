@@ -32,6 +32,10 @@ function CustomeTag({ children, entity, entityType, size = 'normal', ...restProp
                 color = token['orange7'];
                 backgroundColor = token['orange2'];
                 break;
+            case 'D':
+                color = token['green-7'];
+                backgroundColor = token['green-2'];
+                break;
         }
 
         padding = '1px 8px';

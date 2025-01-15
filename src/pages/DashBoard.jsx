@@ -51,8 +51,7 @@ const DashBoard = () => {
         <Layout.Content className="w-100 py-3">
             <Row id="dashboard-block" gutter={16}>
                 <Col className="gutter-row" xs={24} sm={24} md={24} lg={16} xl={16} xxl={18}>
-
-                    <Space direction="horizontal" size={16}>
+                    <Space direction="horizontal" size={6}>
                         <Card
                             title={
                                 <CustomeTag bordered={false} entity={"A"} entityType={'zone'}>
@@ -92,12 +91,34 @@ const DashBoard = () => {
                             {data ?
                                 (<GaugeCard0 database={getData("O")} />) : <p>Zone A not found</p>}
                         </Card>
+
+
+
                     </Space>
 
 
                 </Col>
-                {/* <Col className="gutter-row" xs={24} sm={24} md={24} lg={8} xl={8} xxl={6}>
-                </Col> */}
+            </Row>
+            <Row id="dashboard-block" gutter={24} style={{ marginTop: '16px' }}>
+                <Col className="gutter-row" xs={24} sm={24} md={24} lg={24} xl={24} xxl={24}>
+                    <div style={{ textAlign: 'center' }}>
+                        <Space direction="horizontal" size={8}>
+                            <Card
+                                title={
+                                    <CustomeTag bordered={false} entity={"D"} entityType={'zone'}>
+                                        {"CO2 concentration"}
+                                    </CustomeTag>
+                                }
+                                style={{
+                                    width: 420,
+                                }}
+                            >
+                                {data ?
+                                    (<GaugeCard0 database={getData("O")} />) : <p>Zone A not found</p>}
+                            </Card>
+                        </Space>
+                    </div>
+                </Col>
             </Row>
         </Layout.Content>
     );
