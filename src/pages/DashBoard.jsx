@@ -1,6 +1,6 @@
 import { Col, Row, Layout, Card, Space } from 'antd';
 import React, { useEffect, useRef, useState } from 'react';
-import { GaugeCard, GaugeCard0 } from '../components/GaugeCard';
+import { GaugeCard, GaugeCard0, GaugeCard1 } from '../components/GaugeCard';
 import CustomeTag from '../components/CustomTag';
 import axios from "axios";
 const dynamicBlock = {
@@ -13,11 +13,11 @@ const DashBoard = () => {
     // const tileLayoutRef = useRef(null);
     const [layoutItems, setLayoutItems] = useState([]);
     const [data, setData] = useState(null);
+    const [dataC02, setDataCO2] = useState(null);
     const zone = "A"
 
     const hanldeLayout = () => {
         const rs = [];
-
         setLayoutItems(rs);
     };
 
@@ -29,15 +29,36 @@ const DashBoard = () => {
         let result = { total: test.total, occupied: test.sl, unoccupied: test.total - test.sl }
         return result
     }
+    const getDataC02 = () => {
+        console.log("dataC02")
+        console.log(dataC02)
+        if (dataC02 == null) {
+            return {
+                total: 1,
+                occupied: 0,
+                unoccupied: 0
+            }
+        }
+        let result = { total: 500, occupied: dataC02.co2_concentration, unoccupied: 500 - dataC02.co2_concentration }
+        return result
+    }
     const callApi = async () => {
         try {
+            await axios
+                .get("http://127.0.0.1:5000/zones/co2")
+                .then((response) => {
+                    setDataCO2(response.data);
+                    console.log(response.data)
+                })
+                .catch();
             await axios
                 .get("http://127.0.0.1:5000/zones/stats")
                 .then((response) => {
                     setData(response.data);
-                    console.log(data)
+                    // console.log(data)
                 })
                 .catch();
+
         } catch {
         }
     };
@@ -114,7 +135,7 @@ const DashBoard = () => {
                                 }}
                             >
                                 {data ?
-                                    (<GaugeCard0 database={getData("O")} />) : <p>Zone A not found</p>}
+                                    (<GaugeCard1 database={getDataC02()} />) : <p>Zone A not found</p>}
                             </Card>
                         </Space>
                     </div>
